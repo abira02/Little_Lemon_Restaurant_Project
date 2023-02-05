@@ -85,17 +85,7 @@ nav{
     opacity: 0.8;
     cursor: pointer;
 }
-.offer:hover{
-    animation: zoom 5s 2 linear alternate;
-}
-@keyframes zoom{
-    0%{
-        background-size: 100% 100%;
-    }
-    100%{
-        background-size: 110% 110%;
-    }
-}
+
 .articles{
     width: 100%;
     display: flex;
@@ -234,13 +224,7 @@ footer {
     }
     
 }
-@media screen and (min-width: 500px) and (max-width: 700px)  {
-    nav img{
-        display: block;
-        width: 30%;
-    }
-   
-}
+
 @media screen and (min-width:700px) and (max-width:1080px) {
     .articles article {
         width: 40%;
