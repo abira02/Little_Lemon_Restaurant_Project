@@ -8,13 +8,24 @@
     <title>Little Lemon</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
         <img src="./images/Asset 16@4x.png" alt="Logo">
     </header>
     <nav>
-        <ul>
+        <div class="logo">
+            <img src="./images/Asset 16@4x.png" alt="Logo">
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars" ></i>
+        </label>
+        <label for="check" class="closebtn">
+            <i class="fa fa-times"></i>
+        </label>
+        <ul class="ul">
             <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="book.html">Book</a></li>
@@ -27,7 +38,7 @@
             <h3>20% off this weekend!</h3>
             <button>Book</button>
         </section>
-        <section>
+        <section class="articles">
             <article>
                 <h2>Book a table</h2>
                 <img src="./images/table-booking.jpg" alt="table-booking">
@@ -47,13 +58,28 @@
         </section>
     </main>
     <footer>
-        <div>
+        <div class="copyright-logo">
             <img src="./images/Asset 20@4x.png" alt="logo">
         </div>
-        <div>
+        <div class="copyright">
             <hr>
-            <h3>Copyright reseverd for Little Lemon Resturant</h3>
+            <p></p>Copyright reseverd for Little Lemon Resturant</p>
         </div>
     </footer>
 </body>
+<script>
+    {
+        const ul = document.querySelector(".ul");
+        let lastScrollY = window.scrollY
+
+        window.addEventListener("scroll", () => {
+            if(lastScrollY < window.scrollY){
+                ul.classList.add("ul--hidden");
+            }
+            else{
+                ul.classList.remove("ul--hidden");
+            }
+        })
+    }
+</script>
 </html>
